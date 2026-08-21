@@ -1,0 +1,409 @@
+#maintenance-pdf {
+  width: 210mm;
+  padding: 5mm 15mm;
+  margin: 0 auto;
+  font-family: 'Arial', sans-serif;
+  font-size: 12px;
+  color: #333;
+  background: #fff;
+  box-sizing: border-box;
+  position: relative;
+//   min-height: 297mm; 
+  page-break-after: avoid;
+  page-break-inside: avoid;
+
+  .maintenance-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #fff !important;
+    background: #fff !important;
+  }
+
+  /* Header Styling */
+  .maintenance-header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+    border-bottom: 3px solid #1a5276;
+    padding-bottom: 15px;
+    position: relative;
+
+    .company-top-info {
+      text-align: center;
+      margin-bottom: 10px;
+
+      .company-name-left {
+        p {
+          margin: 0;
+          font-weight: bold;
+          font-size: 14px;
+          color: #1a5276;
+          line-height: 1.3;
+        }
+      }
+    }
+
+    .logo-address-center {
+      text-align: center;
+    }
+
+    .maintenance-title {
+      margin-bottom: 10px;
+
+      h1 {
+        margin: 0;
+        font-size: 24px;
+        font-weight: bold;
+        color: #1a5276;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+    }
+
+    .society-address {
+      text-align: center;
+
+      .address-details {
+        margin: 0;
+
+        p {
+          margin: 2px 0;
+          font-size: 11px;
+          line-height: 1.4;
+          color: #555;
+        }
+      }
+    }
+  }
+
+  /* Details Section */
+  .maintenance-details-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 10px;
+    page-break-inside: avoid;
+
+    .member-info,
+    .receipt-info {
+      flex: 1;
+
+      h3 {
+        margin: 0 0 10px 0;
+        font-size: 14px;
+        color: #1a5276;
+        border-bottom: 2px solid #1a5276;
+        padding-bottom: 5px;
+      }
+
+      .details-table {
+        width: 100%;
+        border-collapse: collapse;
+
+        td {
+          padding: 6px 0;
+          border: none;
+          vertical-align: top;
+
+          &:first-child {
+            font-weight: bold;
+            padding-right: 15px;
+            width: 120px;
+            color: #555;
+          }
+
+          &:last-child {
+            font-weight: normal;
+          }
+        }
+      }
+    }
+  }
+
+  /* Water Usage Table */
+  .water-usage-section {
+    margin-bottom: 10px;
+    page-break-inside: avoid;
+
+    h3 {
+      margin: 0 0 10px 0;
+      font-size: 14px;
+      color: #1a5276;
+      border-bottom: 2px solid #1a5276;
+      padding-bottom: 5px;
+    }
+
+    .water-table {
+      width: 100%;
+      border-collapse: collapse;
+
+      th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: center;
+        font-size: 11px;
+      }
+
+      th {
+        background: #f8f9fa;
+        font-weight: bold;
+        color: #1a5276;
+      }
+
+      td.highlight {
+        font-weight: bold;
+        background: #e8f4fc;
+        color: #1a5276;
+      }
+
+      td.amount-cell {
+        font-weight: bold;
+        color: #28a745;
+      }
+    }
+  }
+
+  /* Breakdown Section */
+  .breakdown-section {
+    margin-bottom: 10px;
+    page-break-inside: avoid;
+
+    h3 {
+      margin: 0 0 10px 0;
+      font-size: 14px;
+      color: #1a5276;
+      border-bottom: 2px solid #1a5276;
+      padding-bottom: 5px;
+    }
+
+    .breakdown-table {
+      width: 100%;
+      border-collapse: collapse;
+
+      td {
+        padding: 8px 0;
+        border-bottom: 1px solid #eee;
+
+        &:first-child {
+          font-weight: bold;
+          color: #555;
+          width: 60%;
+        }
+
+        &:last-child {
+          text-align: right;
+          font-weight: normal;
+        }
+      }
+
+      .fine-amount {
+        color: #dc3545;
+        font-weight: bold;
+      }
+    }
+  }
+
+  /* Payment Summary */
+  .payment-summary-section {
+    margin-bottom: 10px;
+    page-break-inside: avoid;
+
+    h3 {
+      margin: 0 0 10px 0;
+      font-size: 14px;
+      color: #1a5276;
+      border-bottom: 2px solid #1a5276;
+      padding-bottom: 5px;
+    }
+
+    .summary-table {
+      width: 100%;
+      border-collapse: collapse;
+
+      td {
+        padding: 12px 0;
+        font-size: 13px;
+
+        &:first-child {
+          font-weight: bold;
+          color: #555;
+        }
+
+        &:last-child {
+          text-align: right;
+          font-weight: bold;
+        }
+      }
+
+      .total-row {
+        border-top: 2px solid #1a5276;
+        border-bottom: 2px solid #1a5276;
+
+        td {
+          color: #1a5276;
+          font-size: 14px;
+        }
+      }
+
+      .payment-row {
+        td:last-child {
+          color: #28a745;
+        }
+      }
+
+      .pending-row {
+        td:last-child {
+          color: #dc3545;
+
+          &.success {
+            color: #28a745;
+          }
+        }
+      }
+    }
+  }
+
+  /* Amount in Words */
+  .amount-in-words {
+    margin: 20px 0;
+    padding: 12px;
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    page-break-inside: avoid;
+
+    p {
+      margin: 0;
+      font-size: 12px;
+      font-style: italic;
+      color: #555;
+
+      strong {
+        color: #1a5276;
+      }
+    }
+  }
+
+  /* Terms Section */
+  .terms-section {
+    margin-bottom: 10px;
+    page-break-inside: avoid;
+
+    h3 {
+      margin: 0 0 7px 0;
+      font-size: 14px;
+      color: #1a5276;
+      border-bottom: 2px solid #1a5276;
+      padding-bottom: 5px;
+    }
+
+    .terms-content {
+      p {
+        margin: 5px 0;
+        font-size: 10px;
+        line-height: 1.4;
+        color: #666;
+      }
+    }
+  }
+
+  /* Footer */
+  .maintenance-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 3px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+    page-break-inside: avoid;
+
+    .thank-you {
+      flex: 1;
+      text-align: center;
+
+      p {
+        font-weight: bold;
+        font-style: italic;
+        font-size: 12px;
+        color: #1a5276;
+      }
+    }
+
+    .signature {
+      flex: 1;
+      text-align: center;
+
+      p {
+        margin: 0 0 5px 0;
+        font-size: 11px;
+        font-weight: bold;
+        color: #555;
+      }
+
+      .signature-line {
+        width: 150px;
+        height: 1px;
+        background: #333;
+        margin: 0 auto;
+      }
+    }
+
+    .developer-note {
+      flex: 1;
+      text-align: right;
+      font-size: 9px;
+      color: #666;
+    }
+  }
+
+  /* Page Footer */
+  .page-footer {
+    position: absolute;
+    bottom: 10mm;
+    left: 15mm;
+    right: 15mm;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    padding-top: 5px;
+
+    p {
+      margin: 0;
+      font-size: 10px;
+      font-weight: bold;
+      color: #666;
+      font-style: italic;
+    }
+  }
+}
+
+@media print {
+  #maintenance-pdf {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 15mm;
+    box-shadow: none;
+
+    .page-footer {
+      position: fixed;
+      bottom: 10mm;
+      left: 15mm;
+      right: 15mm;
+    }
+
+    .water-table,
+    .breakdown-table,
+    .summary-table {
+      page-break-inside: avoid;
+    }
+
+    .payment-summary-section,
+    .amount-in-words,
+    .terms-section,
+    .maintenance-footer {
+      page-break-before: avoid;
+      page-break-inside: avoid;
+    }
+  }
+}
