@@ -65,7 +65,7 @@ cron.schedule("0 0 1 1 *", async () => {
 
 // Basic Route
 app.get('/', (req, res) => {
-  res.send('Techorses from thunit  Backend !');
+  res.send('New Techorses from thunit  Backend !');
 });
 
 // Server
